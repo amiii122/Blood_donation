@@ -7,7 +7,7 @@ import Home from './Pages/Home/Home'
 import SearchDonor from './Pages/SearchDonor/SearhDonor'
 import Footer from './Components/Footer/index'
 import About from './Pages/About/About'
-import Contactus from './Pages/Contactus/Contactus'
+import Contactus from './Pages/Contactus/ContactusFile'
 
 import { Route, Router, Routes, useLocation } from 'react-router-dom'
 
