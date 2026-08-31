@@ -1,8 +1,8 @@
 import React from 'react'
 
-import ContactInfo from './Component/Contactinfo'
-import ContactHero from './Component/contactHero'
-import ContactForm from './Component/ContactForm'
+import ContactInfo from './Component/ContactInfo.jsx'
+import ContactHero from './Component/ContactHero.jsx'
+import ContactForm from './Component/ContactForm.jsx'
 
 const Contactus = () => {
   return (
