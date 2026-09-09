@@ -15,7 +15,7 @@ const Why_section = () => {
   </div>
 
   {/* Benefits */}
-  <div className="w-full max-w-[1200px] flex flex-wrap items-center justify-center gap-5 lg:gap-10">
+  <div className="w-full overflow-x-auto flex md:justify-center flex-nowrap gap-12 no-scrollbar py-4 ">
 
     {Why_seacton_data.map((ele, index) => (
       <Benefit key={index} params={ele} />

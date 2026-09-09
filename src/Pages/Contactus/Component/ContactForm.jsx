@@ -1,7 +1,23 @@
 import { User, Mail, Tag, Pencil, Send } from "lucide-react";
 import { asserts } from "../../../assets/assets";
+import { useState } from "react";
 
 const ContactForm = () => {
+  const [searhData,setsearchdata]=useState({
+         name:"",
+         email:"",
+         subject:"",
+         message:""
+  })
+  
+   const handleChange = (e) => {
+      setsearchdata({ ...searhData, [e.target.name]: e.target.value });
+    };
+  
+    const handleSubmit=(e)=>{
+      e.stopPropagation()
+      console.log(searhData)
+    }
   return (
     <section className="bg-white px-4 py-8 sm:px-6 lg:px-8 lg:py-10">
       <div className="mx-auto grid max-w-7xl grid-cols-1 overflow-hidden rounded-xl border border-gray-100 shadow-sm lg:grid-cols-5">
@@ -48,7 +64,7 @@ const ContactForm = () => {
             <div className="mt-2 h-1 w-9 rounded-full bg-red-600" />
           </div>
 
-          <form className="mt-6 space-y-4">
+          <form onSubmit={handleSubmit} className="mt-6 space-y-4">
 
             {/* Name + Email */}
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
@@ -56,13 +72,21 @@ const ContactForm = () => {
               <div className="relative">
                 <User className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" size={18} />
 
-                <input type="text" placeholder="Your Name" className="h-12 w-full rounded-md border border-gray-200 bg-white pl-10 pr-4 text-sm text-gray-700 outline-none transition focus:border-red-500 focus:ring-1 focus:ring-red-500" />
+                <input 
+                name="name"
+                value={searhData.name}
+                onChange={handleChange}
+                type="text" placeholder="Your Name" className="h-12 w-full rounded-md border border-gray-200 bg-white pl-10 pr-4 text-sm text-gray-700 outline-none transition focus:border-red-500 focus:ring-1 focus:ring-red-500" />
               </div>
 
               <div className="relative">
                 <Mail className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" size={18} />
 
-                <input type="email" placeholder="Your Email" className="h-12 w-full rounded-md border border-gray-200 bg-white pl-10 pr-4 text-sm text-gray-700 outline-none transition focus:border-red-500 focus:ring-1 focus:ring-red-500" />
+                <input 
+                name="email"
+                value={searhData.value}
+                onChange={handleChange}
+                type="email" placeholder="Your Email" className="h-12 w-full rounded-md border border-gray-200 bg-white pl-10 pr-4 text-sm text-gray-700 outline-none transition focus:border-red-500 focus:ring-1 focus:ring-red-500" />
               </div>
 
             </div>
@@ -71,14 +95,22 @@ const ContactForm = () => {
             <div className="relative">
               <Tag className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" size={18} />
 
-              <input type="text" placeholder="Subject" className="h-12 w-full rounded-md border border-gray-200 bg-white pl-10 pr-4 text-sm text-gray-700 outline-none transition focus:border-red-500 focus:ring-1 focus:ring-red-500" />
+              <input
+              name="subject"
+              value={searhData.subject}
+              onChange={handleChange}
+               type="text" placeholder="Subject" className="h-12 w-full rounded-md border border-gray-200 bg-white pl-10 pr-4 text-sm text-gray-700 outline-none transition focus:border-red-500 focus:ring-1 focus:ring-red-500" />
             </div>
 
             {/* Message */}
             <div className="relative">
               <Pencil className="absolute left-3 top-4 text-gray-400" size={18} />
 
-              <textarea placeholder="Your Message" rows={7} className="w-full resize-none rounded-md border border-gray-200 bg-white py-3 pl-10 pr-4 text-sm text-gray-700 outline-none transition focus:border-red-500 focus:ring-1 focus:ring-red-500" />
+              <textarea
+              name="message"
+              value={searhData.message}
+              onChange={handleChange}
+               placeholder="Your Message" rows={7} className="w-full resize-none rounded-md border border-gray-200 bg-white py-3 pl-10 pr-4 text-sm text-gray-700 outline-none transition focus:border-red-500 focus:ring-1 focus:ring-red-500" />
             </div>
 
             {/* Submit */}

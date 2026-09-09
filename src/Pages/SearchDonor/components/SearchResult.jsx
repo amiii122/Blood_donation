@@ -22,10 +22,12 @@ const SearchResultsHeader = () => {
       {/* Sort Dropdown */}
       <div className="w-full sm:w-auto  min-w-[170px]  ">
         <div  className="  h-10 px-3 border  border-gray-200 rounded-md bg-white flex items-center justify-between text-xs sm:text-sm text-gray-600 cursor-pointer transition-all duration-200 hover:border-red-400 ">
-          <span>
-            Sort by: <span className="font-medium">Nearest First</span>
-           </span>
-           <span className="ml-2">⌄</span>
+           <select className="w-full bg-white   text-sm text-gray-600 font-medium outline-none transition-all duration-200  cursor-pointer">
+              <option value="" >Sorted By:</option>
+              <option value="Nearest">Nearest First</option>
+              <option value="Availability">Availability</option>
+            </select>
+           
         </div>
       </div>
     </div>

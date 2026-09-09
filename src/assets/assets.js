@@ -28,9 +28,16 @@ import ContactHeroImg from './ContactHeroImg.jpeg'
 import white_call_icon from './white_call_icon.png'
 import white_email_icon from './white_email_icon.png'
 import white_location_icon from './white_location_icon.png'
-
+import blood_donation from './blood_donation.png'
+import apple_icon from './apple_icon.png'
+import Google_icon from './Google_icon.png'
+import register_illestruction from './register_illestruction.png'
+import { UsersRound, Droplet, HeartPulse } from "lucide-react";
 
 export const asserts={
+    apple_icon,
+    Google_icon,
+    blood_donation,
     white_email_icon,
     white_call_icon,
     white_location_icon,
@@ -49,7 +56,7 @@ export const asserts={
     profil,
     broke_heart_icon,
     search_icon,
-    
+    Register_icon,
     Logo,
     register_white_icon,
     Hero_section,
@@ -114,7 +121,7 @@ export const Trust=[
     }
 ]
 
-export const steps_data=[
+export const working=[
     {
         icon:search_icon,
         title:"Register",

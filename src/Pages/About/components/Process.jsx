@@ -1,6 +1,8 @@
 import { UserPlus, Search, Bell, Heart } from "lucide-react";
 import Step from '../../../Components/Step/index'
-const Process = () => {
+const Process = ({heading,data}) => {
+
+  
   const steps = [
     {
       icon: UserPlus,
@@ -35,22 +37,22 @@ const Process = () => {
         {/* Heading */}
         <div className="mb-10 text-center">
           <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">
-            How We Make a Difference
+            {heading}
           </h2>
 
           <div className="mx-auto mt-3 h-1 w-12 rounded-full bg-red-600" />
         </div>
 
         {/* Steps */}
-        <div className="flex  z-11 items-center justify-evenly">
+        <div className="w-full overflow-x-auto flex-nowrap gap-12 no-scrollbar py-4 flex  z-11 items-center sm:justify-evenly gap-12">
 
               {
-                steps.map((ele)=>(
+                data.map((ele)=>(
                     <Step params={ele}/>
                 ))
               }
         </div>
-        <div className="relative -top-23  w-[60vw] mx-auto border-t-2 border-dashed border-red-200  "/>
+        <div className=" relative -top-27 lg:w-[80%] xl:w-[70%] w-[90%] mx-auto border-t-2 border-dashed border-red-200  "/>
       </div>
     </section>
   );

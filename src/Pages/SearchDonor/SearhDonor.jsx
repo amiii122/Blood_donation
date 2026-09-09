@@ -6,7 +6,7 @@ import DonorCard from './components/DonorCard'
 import SearchSummary from './components/SearchSummary'
 import RequestBlood from './components/RequestBlood'
 
-const About = () => {
+const SearchDonor = () => {
   return (
     <div className=''>
       <SearchHero/>
@@ -14,7 +14,6 @@ const About = () => {
       <div className="flex flex-col md:flex-row mt-1 gap-2 items-center relative z-20 w-[92%] md:h-[84vh] max-w-6xl mx-auto bg-white rounded-xl  shadow-md  border border-gray-100  p-4 sm:p-5 md:p-6">
          <div className='h-[75vh] w-full md:h-full md:w-[75%] overflow-hidden  p-2  bg-white rounded-xl  shadow-md  border border-gray-100 '>
            <SearchResultsHeader/>
-
             <DonorCard/>
             <DonorCard/>
             <DonorCard/>
@@ -36,4 +35,4 @@ const About = () => {
   )
 }
 
-export default About
+export default SearchDonor

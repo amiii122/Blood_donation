@@ -1,6 +1,11 @@
 import React from 'react'
+
 import { asserts } from '../../../assets/assets'
+import { useAppContext } from '../../../AppContext/Appcontext'
 const About_section = () => {
+
+    const {navigate}=useAppContext()
+
   return (
    <div className="w-full min-h-[38vh] bg-gray-200 mx-auto mt-10 px-5 py-8 lg:px-0 lg:py-0 flex flex-col md:flex-row items-center justify-center gap-8 md:gap-10">
 
@@ -29,14 +34,14 @@ const About_section = () => {
       reliable for everyone, everywhere.
     </p>
 
-    <button className="px-5 py-2 bg-red-500 text-white rounded-lg text-[12px] mt-3">
+    <button onClick={()=>navigate("./about")} className="px-5 py-2 bg-red-500 cursor-pointer text-white rounded-lg text-[12px] mt-3">
       Learn more about us
     </button>
 
   </div>
 
 </div>
-  )
+   )
 }
 
 export default About_section

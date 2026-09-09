@@ -80,8 +80,6 @@ const DonorCard = ({
           flex-shrink-0  px-1 py-1.5 sm:px-4  sm:py-2  border border-red-500  text-red-600  rounded-md  text-[10px]
           sm:text-xs font-semibold flex items-center gap-1 transition-all  duration-300  hover:bg-red-600
           hover:text-white  active:scale-95  ">
-        {/* <img>{asserts.single_icon}</img> */}
-        <img className="w-2 h-2" src={asserts.single_icon} alt="" />
         <span>View Details</span>
       </button>
       </div>

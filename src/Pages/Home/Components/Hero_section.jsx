@@ -2,9 +2,12 @@ import React from 'react'
 import { asserts } from '../../../assets/assets'
 import Trust_comp from './Trust_comp'
 import { Trust } from '../../../assets/assets'
+import { UsersRound, Droplet, HeartPulse } from "lucide-react";
+import { useAppContext } from '../../../AppContext/Appcontext';
+
 
 const Hero_section = () => {
-  
+   const {navigate}=useAppContext()
   return (
     <div className="w-full min-h-[68vh] bg-white flex flex-col lg:flex-row">
 
@@ -25,7 +28,8 @@ const Hero_section = () => {
     {/* Buttons */}
     <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-5">
 
-      <button className="px-5 py-3 bg-red-600 rounded font-bold text-white flex items-center justify-center gap-2 w-full sm:w-fit">
+      <button onClick={()=>navigate('./donorreg')} className="px-5 py-3 bg-red-600 rounded font-bold text-white flex items-center justify-center gap-2 w-full sm:w-fit font-semibold
+            cursor-pointer transition-all duration-300  hover:bg-red-700  hover:text-white hover:shadow-md  hover:scale-[1.01]  active:scale-[0.98]">
         <img
           className="w-4 h-4"
           src={asserts.white_heart_icon}
@@ -34,12 +38,9 @@ const Hero_section = () => {
         Become a Donor
       </button>
 
-      <button className="px-5 py-3 flex items-center justify-center text-red-600 border border-red-600 rounded font-semibold gap-1 w-full sm:w-fit">
-        <img
-          className="w-5 h-5"
-          src={asserts.red_drop_icon}
-          alt="drop icon"
-        />
+      <button onClick={()=>navigate("./search")} className="px-5 py-3 flex items-center justify-center text-red-600 border border-red-600 rounded font-semibold gap-1 w-full sm:w-fit font-semibold
+               cursor-pointer transition-all duration-300    hover:shadow-md  hover:scale-[1.01]  active:scale-[0.98]  ">
+        <img className="w-5 h-5" src={asserts.red_drop_icon}  alt="drop icon" />
         Request Blood
       </button>
 

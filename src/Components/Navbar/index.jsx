@@ -95,28 +95,19 @@ const index = () => {
 
     {/* Desktop Buttons */}
     <div className="hidden md:flex items-center gap-3 lg:gap-4">
-
-      <button
-        className="px-6 lg:px-7 py-2.5 rounded-md border border-red-600
-        text-red-600 text-sm font-bold transition-all duration-300
-        hover:bg-red-600 hover:text-white"
-      >
-        Login
-      </button>
-
-      <button
-        className="flex items-center gap-2 px-6 lg:px-7 py-2.5 rounded-md
-        bg-red-600 text-white text-sm font-bold transition-all duration-300
-        hover:bg-red-700 hover:shadow-md"
-      >
-        <img
-          className="w-4 h-4"
-          src={asserts.register_white_icon}
-          alt="register"
-        />
-
-        Register
-      </button>
+     <NavLink to='login'>
+      <button className=" text-red-500 px-12 py-2 border border-red-500  rounded-md flex items-center justify-center  gap-2 text-sm font-semibold
+            cursor-pointer transition-all duration-300  hover:bg-red-700  hover:text-white hover:shadow-md  hover:scale-[1.01]  active:scale-[0.98]  " >
+             Login
+        </button>
+      </NavLink>
+       <NavLink to='register'>
+             <button className=" px-6 py-2 bg-red-600 text-white  rounded-md flex items-center justify-center
+            gap-2 text-sm font-semibold cursor-pointer transition-all duration-300  hover:bg-red-700
+              hover:text-white hover:shadow-md hover:scale-[1.01]  active:scale-[0.98]  ">
+             <img className="w-4 h-4" src={asserts.register_white_icon} alt="register" />Register
+             </button>
+       </NavLink>
 
     </div>
 
@@ -209,8 +200,7 @@ const index = () => {
         </li>
 
         <li>
-          <NavLink
-            to="/contact"
+          <NavLink to="/contact"
             onClick={() => setIsOpen(false)}
             className={({ isActive }) =>
               `block px-4 py-3 rounded-md text-sm font-semibold transition-all duration-300
@@ -230,28 +220,21 @@ const index = () => {
 
       {/* Mobile Buttons */}
       <div className="flex flex-col gap-3 mt-5 pt-5 border-t border-gray-100">
-
-        <button
-          className="w-full py-2.5 rounded-md border border-red-600
-          text-red-600 text-sm font-bold transition-all duration-300
-          hover:bg-red-600 hover:text-white"
-        >
-          Login
-        </button>
-
+        <NavLink to="/login">
+          <button className="w-full py-2.5 rounded-md border border-red-600
+           text-red-600 text-sm font-bold transition-all duration-300
+           hover:bg-red-600 hover:text-white" >
+           Login
+         </button>
+        </NavLink>
+        <NavLink to="/register">
         <button
           className="w-full py-2.5 rounded-md bg-red-600 text-white
           text-sm font-bold flex items-center justify-center gap-2
-          transition-all duration-300 hover:bg-red-700"
-        >
-          <img
-            className="w-4 h-4"
-            src={asserts.register_white_icon}
-            alt="register"
-          />
-
-          Register
+          transition-all duration-300 hover:bg-red-700">
+          <img  className="w-4 h-4"  src={asserts.register_white_icon} alt="register"/> Register
         </button>
+        </NavLink> 
 
       </div>
 

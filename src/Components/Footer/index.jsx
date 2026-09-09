@@ -50,16 +50,16 @@ const Footer = () => {
 
             {openSection === "quick" && (
               <div className="pb-3 text-xs text-red-100">
-                <a href="#" className="block py-1">
+                <a href="/" className="block py-1">
                   Home
                 </a>
-                <a href="#" className="block py-1">
+                <a href="/search" className="block py-1">
                   Search Donors
                 </a>
-                <a href="#" className="block py-1">
+                <a href="/about" className="block py-1">
                   About Us
                 </a>
-                <a href="#" className="block py-1">
+                <a href="/contact" className="block py-1">
                   Contact Us
                 </a>
               </div>
@@ -82,13 +82,13 @@ const Footer = () => {
 
             {openSection === "donors" && (
               <div className="pb-3 text-xs text-red-100">
-                <a href="#" className="block py-1">
+                <a href="/donorreg" className="block py-1">
                   Become a Donor
                 </a>
                 <a href="#" className="block py-1">
                   Donor Dashboard
                 </a>
-                <a href="#" className="block py-1">
+                <a href="/search" className="block py-1">
                   Blood Requests
                 </a>
                 <a href="#" className="block py-1">
@@ -159,10 +159,10 @@ const Footer = () => {
             <h3 className="mb-4 font-semibold">Quick Links</h3>
 
             <div className="space-y-3 text-sm text-red-100">
-              <a href="#" className="block">Home</a>
-              <a href="#" className="block">Search Donors</a>
-              <a href="#" className="block">About Us</a>
-              <a href="#" className="block">Contact Us</a>
+              <a href="/" className="block">Home</a>
+              <a href="/search" className="block">Search Donors</a>
+              <a href="/about" className="block">About Us</a>
+              <a href="/contact" className="block">Contact Us</a>
             </div>
           </div>
 
@@ -172,9 +172,9 @@ const Footer = () => {
             <h3 className="mb-4 font-semibold">For Donors</h3>
 
             <div className="space-y-3 text-sm text-red-100">
-              <a href="#" className="block">Become a Donor</a>
+              <a href="/donorreg" className="block">Become a Donor</a>
               <a href="#" className="block">Donor Dashboard</a>
-              <a href="#" className="block">Blood Requests</a>
+              <a href="search" className="block">Blood Requests</a>
               <a href="#" className="block">FAQs</a>
             </div>
           </div>

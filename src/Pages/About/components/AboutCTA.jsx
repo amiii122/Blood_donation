@@ -1,7 +1,8 @@
 import { ArrowRight } from "lucide-react";
 import { asserts } from "../../../assets/assets";
-
+import { useAppContext } from "../../../AppContext/Appcontext";
 const AboutCTA = () => {
+const {navigate}=useAppContext()
   return (
     <section className="bg-red-50 px-4 py-10 sm:px-6 lg:px-8 lg:py-14">
       <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-8 lg:grid-cols-2 lg:gap-16">
@@ -30,14 +31,20 @@ const AboutCTA = () => {
 
           {/* Buttons */}
           <div className="mt-6 flex flex-col justify-center gap-3 sm:flex-row lg:justify-start">
-            <button className="flex items-center justify-center gap-2 rounded-md bg-red-600 px-5 py-2.5 text-sm font-medium text-white shadow-sm transition hover:bg-red-700">
+            {/* <button className="flex items-center justify-center gap-2 rounded-md bg-red-600 px-5 py-2.5 text-sm font-medium text-white shadow-sm transition hover:bg-red-700">
               Become a Donor
-              <ArrowRight size={16} />
-            </button>
+              
+            </button> */}
+                           <button onClick={()=>navigate('./donorreg')} className="px-5 py-3 bg-red-600 rounded font-bold text-white flex items-center justify-center gap-2 w-full sm:w-fit font-semibold
+                           cursor-pointer transition-all duration-300  hover:bg-red-700  hover:text-white hover:shadow-md  hover:scale-[1.01]  active:scale-[0.98]">
+                           Become a Donor
+                           <ArrowRight size={16} />
+                           </button>
 
-            <button className="rounded-md border border-red-600 bg-white px-5 py-2.5 text-sm font-medium text-red-600 transition hover:bg-red-50">
-              Request Blood
-            </button>
+                           <button onClick={()=>navigate("./search")} className="px-5 py-3 flex items-center justify-center text-red-600 border border-red-600 rounded font-semibold gap-1 w-full sm:w-fit font-semibold
+                           cursor-pointer transition-all duration-300    hover:shadow-md  hover:scale-[1.01]  active:scale-[0.98]  ">
+                           Request Blood
+                           </button>
           </div>
         </div>
 
