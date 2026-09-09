@@ -35,9 +35,10 @@ const [searhData,setsearchdata]=useState({
           <div  className=" h-11  w-full border  border-gray-200 rounded-md px-3 flex  items-center justify-between text-sm font-medium text-gray-700 cursor-pointer  transition-all duration-200 hover:border-red-400   " >
             <div className="flex items-center gap-2 p-1">
               <span className="text-red-600">🩸</span>
-               
-            <select name="bloodGroup" onChange={handleChange} value={searchValues?.bloodGroup?searchValues.bloodGroup:searhData.bloodGroup} className="px-2  bg-white   text-sm text-gray-600 font-medium outline-none transition-all duration-200  cursor-pointer">
-              <option value="" disabled>Select Blood Group</option>
+          <div className='w-[72vw] md:w-[14vw] '>
+             <select name='bloodGroup'  value={searchValues?.bloodGroup?searchValues.bloodGroup:searhData.bloodGroup} onChange={handleChange}
+              className="w-full text-sm text-gray-600 font-medium outline-none transition-all duration-200  cursor-pointer">
+             <option value="" disabled>Select Blood Group</option>
               <option value="A+">A+</option>
               <option value="A-">A-</option>
               <option value="B+">B+</option>
@@ -47,8 +48,8 @@ const [searhData,setsearchdata]=useState({
               <option value="O+">O+</option>
               <option value="O-">O-</option>
              </select>
-    
-            </div>
+           </div>
+          </div>
 
            
           </div>
@@ -60,10 +61,12 @@ const [searhData,setsearchdata]=useState({
           <label  className=" block  text-xs font-semibold  text-gray-600  mb-2">   City
           </label>
 
-          <div className=" h-11 w-full border border-gray-200  rounded-md  px-3   flex  items-center justify-between  text-sm  font-medium  text-gray-700 cursor-pointer  transition-all duration-200  hover:border-red-400  " >
-            <div className="flex items-center gap-2">
+          <div className=" h-11 w-full border border-gray-200  rounded-md  pl-3   flex  items-center justify-between  text-sm  font-medium  text-gray-700 cursor-pointer  transition-all duration-200  hover:border-red-400  " >
+            <div className="w-full flex items-center gap-2">
               <span>📍</span>
-              <select name="city" onChange={handleChange} value={searchValues?.city?searchValues.city:searhData.city} className="w-[17vw]      text-sm text-gray-600 font-medium outline-none transition-all duration-200  cursor-pointer">
+              <div className='w-[79vw] '>
+              <select name="city" onChange={handleChange} value={searchValues?.city?searchValues.city:searhData.city} 
+              className="w-full text-sm text-gray-600 font-medium outline-none transition-all duration-200  cursor-pointer">
               <option value="">Select city</option>
               <option value="kohat">Kohat</option>
               <option value="peshawer">Peshawer</option>
@@ -71,7 +74,8 @@ const [searhData,setsearchdata]=useState({
               <option value="Swat">Swat</option>
               <option value="Abbottabad">Abbottabad</option>
               <option value="Swabi">Swabi</option>
-            </select>
+              </select>
+              </div>
             </div>
           </div>
         </div>
@@ -86,11 +90,14 @@ const [searhData,setsearchdata]=useState({
           <div className="  h-11 w-full  border border-gray-200 rounded-md  px-3 flex  items-center justify-between text-sm  font-medium text-gray-700 cursor-pointer  transition-all duration-200 hover:border-red-400  " >
             <div className="flex items-center gap-2">
               <span>📅</span>
-              <select name="Avalibility" value={searhData.Avalibility} onChange={handleChange} className="w-[17vw] text-sm text-gray-600 font-medium outline-none transition-all duration-200  cursor-pointer">
+            <div className="w-[73vw] md:w-[14vw]">
+              <select name="Avalibility" value={searhData.Avalibility} onChange={handleChange} 
+              className="w-full text-sm text-gray-600 font-medium outline-none transition-all duration-200  cursor-pointer">
               <option value="All">All</option>
               <option value="Male">Male</option>
               <option value="Female">Female</option>
-            </select>
+              </select>
+            </div>
 
             </div>
            

@@ -48,7 +48,7 @@ const index = () => {
       Blood Group
     </h2>
 
-   <div className='w-45 h-12 rounded-lg bg-white px-3'>
+     <div className='w-full h-12 rounded-lg bg-white px-4'>
            <select name='bloodGroup' value={searchdata.bloodGroup} onChange={handleChange} className="w-full h-11  bg-white   text-sm text-gray-600 font-medium outline-none transition-all duration-200  cursor-pointer">
              <option value="" disabled>Select Blood Group</option>
               <option value="A+">A+</option>
@@ -71,7 +71,7 @@ const index = () => {
     <h2 className="text-white font-semibold text-[12px]">
       City
     </h2>
-      <div className='w-40 h-12 rounded-lg bg-white px-3'>
+      <div className='w-full h-12  rounded-lg bg-white px-3'>
           <select name='city' value={searchdata.city} onChange={handleChange} className="w-full h-11  bg-white   text-sm text-gray-600 font-medium outline-none transition-all duration-200  cursor-pointer">
               <option value="">Select city</option>
               <option value="kohat">Kohat</option>
